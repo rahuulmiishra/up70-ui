@@ -1,0 +1,120 @@
+:root {
+  --success: #4caf50;
+  --danger: #f44336;
+  --info: #2196f3;
+  --success-bg: rgba(76, 175, 80, 0.1);
+  --danger-bg: rgba(244, 67, 54, 0.1);
+  --info-bg: rgba(233, 150, 243, 0.1);
+}
+
+.toast {
+  width: 340px;
+  border-radius: 6px;
+  border: 2px solid var(--danger);
+  background-color: var(--danger-bg);
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s linear;
+  @starting-style {
+    transform: translateX(100%);
+  }
+}
+
+.exiting-toast {
+  animation: exitingAnimation 0.3s linear forwards;
+}
+
+@keyframes exitingAnimation {
+  to {
+    transform: translateX(120%);
+  }
+}
+
+.toast-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toast-container[data-position="top-right"] {
+  top: 10px;
+  right: 10px;
+}
+
+.toast-container[data-position="top-left"] {
+  top: 10px;
+  left: 10px;
+}
+
+.toast-container[data-position="bottom-right"] {
+  bottom: 10px;
+  right: 10px;
+}
+.toast-container[data-position="bottom-left"] {
+  bottom: 10px;
+  left: 10px;
+}
+
+.toast-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+
+.toast-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 95%;
+}
+
+.toast-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.toast-title-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.toast[data-type="info"] {
+  border-color: var(--info);
+  background-color: var(--info-bg);
+}
+
+.toast[data-type="danger"] {
+  border-color: var(--danger);
+  background-color: var(--danger-bg);
+}
+.toast[data-type="success"] {
+  border-color: var(--success);
+  background-color: var(--success-bg);
+}
+
+.toast-cta {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.toast-progress {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: yellow;
+  left: 0;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  transition: width 0.2s linear;
+}
