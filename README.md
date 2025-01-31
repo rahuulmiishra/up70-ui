@@ -1,5 +1,9 @@
 # up70-ui Component Library
 
+installation
+
+## npm install up70-ui@latest
+
 This library provides a collection of reusable React components to accelerate your development process.
 
 ## Components
