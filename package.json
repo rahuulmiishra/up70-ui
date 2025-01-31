@@ -1,13 +1,17 @@
 {
   "name": "up70-ui",
-  "version": "1.0.1",
-   "type": "module",
-  "main": "dist/index.js", 
-  "module": "dist/index.esm.js", 
-    "files": [
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahuulmiishra/up70-ui.git"
+  },
+  "version": "1.0.8",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
     "dist"
   ],
- "scripts": {
+  "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build"
   },
